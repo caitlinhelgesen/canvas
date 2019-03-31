@@ -45,7 +45,7 @@ window.addEventListener('mousemove', function (e){
   y=e.pageY;
   draw();
 })
-
+//event listener to make touch work on mobile
 window.addEventListener('touchmove', function (e) {
       x = e.touches[0].pageX;
       y = e.touches[0].pageY;
@@ -56,8 +56,8 @@ window.addEventListener('touchmove', function (e) {
 //event listener to make pen larger
 window.addEventListener('keydown', function (e){
   console.log(e.keyCode);
-  if (e.keyCode==38){
-    radius=radius + 1;
+  if (e.keyCode==38){ //keycode for up arrow
+    radius=radius + 1; //makes pen larger by 1
   }
   draw();
 })
@@ -65,9 +65,9 @@ window.addEventListener('keydown', function (e){
 window.addEventListener('keydown', function (e){
   console.log(e.keyCode);
 
-  if (e.keyCode==40)
+  if (e.keyCode==40) //keycode for down arrow
   {
-    if (radius - 1 < 1)
+    if (radius - 1 < 1) //prevents pen from getting smaller than 1
     {
       radius=radius;
     }else
@@ -75,11 +75,11 @@ window.addEventListener('keydown', function (e){
         radius=radius - 1;
       }
   }
-  draw(); //if keycode is
+  draw();
 })
 
-console.log(window.visualViewport)
-var viewHeight = window.visualViewport.height * .8
+console.log(window.visualViewport) //shows width and height of window
+var viewHeight = window.visualViewport.height * .8 //take width and height and multiply by .8 for 80%
 var viewWidth = window.visualViewport.width * .8
 console.log(viewHeight)
 
@@ -91,8 +91,9 @@ console.log(viewHeight)
 
 
 //event listener to change colors
+// needs conditional that takes keycode for letter and and changes the color variable
 window.addEventListener('keydown', function (e){
-  if (e.keyCode==66){
+  if (e.keyCode==66){ //66 is b
     color="blue";
   }
   else if (e.keyCode==71){
@@ -121,12 +122,12 @@ document.getElementById("colorPicker").addEventListener('input', function (e){
   console.log(document.getElementById("colorPicker").value);
 draw();
 })
-
+//event listener to change the canvas size and clear on mobile
 window.addEventListener('orientationchange', function (e){
   console.log('orientation')
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  canvas.width = viewWidth;
-  canvas.height = viewHeight;
+  ctx.clearRect(0,0, canvas.width, canvas.height); //clears canvas
+  canvas.width = viewWidth; //canvas size tied to variables above
+  canvas.height = viewHeight; //canvas size
   draw();
 })
 
