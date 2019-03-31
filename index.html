@@ -127,9 +127,12 @@ draw();
 
 window.addEventListener('orientationchange', function (e){
   ctx.clearRect(0,0, canvas.width, canvas.height);
+  canvas.width = viewWidth;
+  canvas.height = viewHeight;
 draw();
 })
-//
+
+
 
 </script>
   </body>
