@@ -18,7 +18,7 @@
 
 <!-- <button onclick="colorPicker()">Try it</button> -->
 <!-- <input type="color" id="bgcolor" value="#ffffff"/> -->
-<p>Select your color: v2<p>
+<p>Select your color:<p>
 <input type="color" id="colorPicker" value="#ff0000">
 <script>
 
@@ -118,7 +118,6 @@ window.addEventListener('orientationchange', function (e), {
   ctx.clearRect(0,0, canvas.width, canvas.height);
   canvas.width = viewWidth;
   canvas.height = viewHeight;
-  location.reload();
   draw();
 })
 
