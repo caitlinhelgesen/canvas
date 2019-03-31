@@ -112,12 +112,15 @@ window.addEventListener('keydown', function (e){
   }
   draw();
 })
-//colorPicker
-// function colorPicker(){
-//       var colorpick = document.createElement("INPUT");
-//       colorpick.setAttribute("type", "color");
-//       document.body.appendChild(colorpick);
-// }
+
+window.addEventListener('orientationchange', function (e){
+  console.log('orientation')
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  canvas.width = viewWidth;
+  canvas.height = viewHeight;
+  draw();
+})
+
 document.getElementById("colorPicker").addEventListener('input', function (e){
   console.log(e);
   color=document.getElementById("colorPicker").value;
@@ -125,12 +128,7 @@ document.getElementById("colorPicker").addEventListener('input', function (e){
 draw();
 })
 
-window.addEventListener('orientationchange', function (e){
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  canvas.width = viewWidth;
-  canvas.height = viewHeight;
-draw();
-})
+
 
 
 
