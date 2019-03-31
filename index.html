@@ -18,7 +18,7 @@
 
 <!-- <button onclick="colorPicker()">Try it</button> -->
 <!-- <input type="color" id="bgcolor" value="#ffffff"/> -->
-<p>Select your color: v1<p>
+<p>Select your color: v2<p>
 <input type="color" id="colorPicker" value="#ff0000">
 <script>
 
@@ -47,8 +47,8 @@ window.addEventListener('mousemove', function (e){
 })
 
 window.addEventListener('touchmove', function (e) {
-      x = e.touches[0].screenX;
-      y = e.touches[0].screenY;
+      x = e.touches[0].pageX;
+      y = e.touches[0].pageY;
       draw();
     })
 
