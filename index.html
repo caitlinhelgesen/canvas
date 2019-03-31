@@ -113,13 +113,7 @@ window.addEventListener('keydown', function (e){
   draw();
 })
 
-window.addEventListener('orientationchange', function (e), {
-  console.log('orientation')
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  canvas.width = viewWidth;
-  canvas.height = viewHeight;
-  draw();
-})
+
 
 document.getElementById("colorPicker").addEventListener('input', function (e){
   console.log(e);
@@ -128,8 +122,13 @@ document.getElementById("colorPicker").addEventListener('input', function (e){
 draw();
 })
 
-
-
+window.addEventListener('orientationchange', function (e){
+  console.log('orientation')
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  canvas.width = viewWidth;
+  canvas.height = viewHeight;
+  draw();
+})
 
 
 </script>
