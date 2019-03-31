@@ -116,44 +116,15 @@ document.getElementById("colorPicker").addEventListener('input', function (e){
   console.log(document.getElementById("colorPicker").value);
 draw();
 })
-// window.addEventListener('click', function (e){
-//   console.log(e)
-//   console.log("clicked on color picker");
-//   console.log(e.pageY);
-//   x = e.pageX;
-//   y = e.pageY;
-//   var imageData = ctx.getImageData(x, y, 1, 1).data;
-//   console.log(imageData)
-//   // color= 'rgba(' + 45 + ',' + 200 + ',' + 40 + ',1)';
-//   color =  'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
-//   console.log(color)
-//   //color = "brown"
-// draw();
-// })
-//
-// favcolor.addEventListener('click', function (e){
-//   function colorPicker(){
-//       var colorpick = document.createElement("INPUT");
-//       colorpick.setAttribute("type", "color");
-//       document.body.appendChild(colorpick);
-//   }
-//   // onchange="colorPicker(this)" onclick="colorPicker(this)"
-//   console.log(t.value);
-//   color = t.value;
-//   draw();
-// })
-// function colorPicker(t) {
-//   console.log(t.value);
-//   color = t.value;
-// }
+
 window.addEventListener('orientationchange', function (e){
   ctx.clearRect(0,0, canvas.width, canvas.height);
 })
 //
-// window.addEventListener('touchmove', function (e) {
-//       canvas.x = e.touches[0].screenX;
-//       canvas.y = e.touches[0].screenY;
-//     })
+window.addEventListener('touchmove', function (e) {
+      canvas.x = e.touches[0].screenX;
+      canvas.y = e.touches[0].screenY;
+    })
 
 </script>
   </body>
