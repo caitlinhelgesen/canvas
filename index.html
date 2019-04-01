@@ -102,6 +102,7 @@ window.addEventListener('keydown', function (e){
   else if(e.keyCode==89){
     color="yellow";
   }
+
   draw();
 })
 
@@ -124,10 +125,11 @@ draw();
 })
 //event listener to change the canvas size and clear on mobile
 window.addEventListener('orientationchange', function (e){
-  console.log('orientation')
-  ctx.clearRect(0,0, canvas.width, canvas.height); //clears canvas
+  console.log(canvas.width, canvas.height)
   canvas.width = viewWidth; //canvas size tied to variables above
   canvas.height = viewHeight; //canvas size
+  ctx.clearRect(0,0, canvas.width, canvas.height); //clears canvas
+
   draw();
 })
 
