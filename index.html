@@ -89,11 +89,11 @@ console.log(viewHeight)
    canvas.height = viewHeight;
  })
 
- window.addEventListener('orientationchange', function (){
+ window.addEventListener('orientationchange', function (e){
    console.log(canvas.width, canvas.height);
    canvas.width = viewWidth; //canvas size tied to variables above
    canvas.height = viewHeight; //canvas size
-   location.reload();
+   window.location.reload();
    // ctx.clearRect(0,0, canvas.width, canvas.height); //clears canvas
 
    draw();
@@ -124,7 +124,6 @@ window.addEventListener('keydown', function (e){
   }
   draw();
 })
-
 
 
 document.getElementById("colorPicker").addEventListener('input', function (e){
