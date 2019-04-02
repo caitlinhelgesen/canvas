@@ -79,8 +79,8 @@ window.addEventListener('keydown', function (e){
 })
 
 console.log(window.visualViewport) //shows width and height of window
-var viewHeight = window.visualViewport.height * .8 //take width and height and multiply by .8 for 80%
-var viewWidth = window.visualViewport.width * .8
+var viewHeight = window.innerHeight * .8 //take width and height and multiply by .8 for 80%
+var viewWidth = window.innerWidth * .8
 console.log(viewHeight)
 
 // set canvas size
